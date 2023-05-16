@@ -1,0 +1,32 @@
+{
+  "estudant": [
+    {
+      "id": 1,
+      "name": "Matador de Onça",
+      "email": "matadordeonca@gmail.com",
+      "contato": "(11) 91234-5678",
+      "serie": "6 ano"
+    },
+    {
+      "id": 2,
+      "name": "Zé do Peneu ",
+      "email": "zedopeneu@gmail.com",
+      "contato": "(11) 91234-5678",
+      "serie": "9 ano"
+    },
+    {
+      "id": 3,
+      "name": "Raluca",
+      "email": "raluca@gmail.com",
+      "contato": "(11) 91234-5678",
+      "serie": "7 ano"
+    },
+    {
+      "id": 4,
+      "name": "Diggo",
+      "email": "esperavamais@raluca.kkk",
+      "contato": "(11) 96669-0110",
+      "serie": "8 ano"
+    }
+  ]
+}

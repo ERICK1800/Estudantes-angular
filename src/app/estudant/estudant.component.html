@@ -1,0 +1,70 @@
+<div class="row pe-3 ps-3">
+    <div class="col mt-5 m-auto">
+        <form [formGroup]="formGroupEstudant">
+            <div class="row mb-3">
+                <div class="col-1">
+                    <label for="name" class="form-label">Nome: </label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="name" placeholder="None" formControlName="name">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-1">
+                    <label for="email" class="form-label text-start">Email</label>
+                </div>
+                <div class="col">
+                    <input type="email" class="form-control" id="email" placeholder="exemplo@gmail.com" formControlName="email">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-1">
+                    <label for="contato" class="form-label">Contato: </label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="contato" placeholder="(11) 99999-9999" formControlName="contato" maxlength="15">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-1">
+                    <label for="serie" class="form-label">Sére: </label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="serie" placeholder="3 ano" formControlName="serie">
+                </div>
+            </div>
+            <div class="mb-3 d-flex justify-content-end">
+                <button class="btn btn-outline-dark" (click)="save()">SALVAR</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row pe-3 ps-3 mb-5">
+    <div class="col m-auto">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">CONTATO</th>
+                    <th scope="col">SÉRIE</th>
+                    <th scope="col">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let estudant of estudantes">
+                    <th scope="row">{{estudant.id}}</th>
+                    <td>{{estudant.name}}</td>
+                    <td>{{estudant.email}}</td>
+                    <td>{{estudant.contato}}</td>
+                    <td>{{estudant.serie}}</td>
+                    <td class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-outline-danger me-1" (click)="remove(estudant)">Excluir</button>
+                        <button type="button" class="btn btn-outline-primary" (click)="edit(estudant)">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
